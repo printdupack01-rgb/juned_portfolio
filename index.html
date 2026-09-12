@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-color="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juned Khan — Graphic Designer & Packaging Specialist</title>
+  <meta name="description" content="Portfolio of Juned Khan — Professional Graphic Designer specializing in packaging design, dyelines, branding, and print-ready artwork based in Mumbai Mahanagar." />
+  
+  <!-- Google Fonts: Roboto & Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CSS SYSTEM & ROBOTO TYPOGRAPHY (Apple / Stripe Premium Minimal)
+       ========================================================================== */
+    :root {
+      --font-main: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Roboto Mono', monospace;
+
+      /* Base Light Theme */
+      --bg-primary: #fcfcfd;
+      --bg-secondary: #f4f5f8;
+      --bg-card: rgba(255, 255, 255, 0.90);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --bg-glass: rgba(255, 255, 255, 0.82);
+      
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      
+      --border-light: rgba(0, 0, 0, 0.08);
+      --border-medium: rgba(0, 0, 0, 0.14);
+      --border-active: rgba(0, 0, 0, 0.28);
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 10px 30px -4px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 22px 48px -8px rgba(0, 0, 0, 0.12);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Dark Mode Overrides */
+    [data-theme="dark"] {
+      --bg-primary: #0a0c10;
+      --bg-secondary: #12151d;
+      --bg-card: rgba(18, 22, 31, 0.78);
+      --bg-card-hover: rgba(26, 31, 44, 0.94);
+      --bg-glass: rgba(12, 15, 21, 0.82);
+      
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      
+      --border-light: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.14);
+      --border-active: rgba(255, 255, 255, 0.3);
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+      --shadow-md: 0 10px 30px -4px rgba(0, 0, 0, 0.65);
+      --shadow-lg: 0 22px 48px -8px rgba(0, 0, 0, 0.85);
+    }
+
+    /* 5 Dynamic Accent Palettes */
+    [data-color="blue"] {
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-subtle: rgba(37, 99, 235, 0.14);
+      --accent-glow: rgba(37, 99, 235, 0.38);
+      --accent-grad: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+
+    [data-color="green"] {
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --accent-subtle: rgba(16, 185, 129, 0.14);
+      --accent-glow: rgba(16, 185, 129, 0.38);
+      --accent-grad: linear-gradient(135deg, #34d399 0%, #059669 100%);
+    }
+
+    [data-color="purple"] {
+      --accent: #8b5cf6;
+      --accent-hover: #7c3aed;
+      --accent-subtle: rgba(139, 92, 246, 0.14);
+      --accent-glow: rgba(139, 92, 246, 0.38);
+      --accent-grad: linear-gradient(135deg, #a78bfa 0%, #6d28d9 100%);
+    }
+
+    [data-color="red"] {
+      --accent: #f43f5e;
+      --accent-hover: #e11d48;
+      --accent-subtle: rgba(244, 63, 94, 0.14);
+      --accent-glow: rgba(244, 63, 94, 0.38);
+      --accent-grad: linear-gradient(135deg, #fb7185 0%, #be123c 100%);
+    }
+
+    [data-color="orange"] {
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-subtle: rgba(249, 115, 22, 0.14);
+      --accent-glow: rgba(249, 115, 22, 0.38);
+      --accent-grad: linear-gradient(135deg, #fb923c 0%, #c2410c 100%);
+    }
+
+    /* Base Reset & Alignment */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      position: relative;
+    }
+
+    a { color: inherit; text-decoration: none; transition: var(--transition); }
+    button { font-family: var(--font-main); cursor: pointer; border: none; background: none; outline: none; }
+
+    /* Scroll Progress Bar */
+    #scrollProgressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--accent-grad);
+      z-index: 9999;
+      transition: width 0.1s ease-out;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    /* Ambient Interactive Spotlight */
+    .mouse-spotlight {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background: radial-gradient(650px circle at var(--mouse-x, 50vw) var(--mouse-y, 30vh), var(--accent-subtle), transparent 80%);
+      transition: background 0.2s ease;
+    }
+
+    /* Ambient Lighting Mesh */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .mesh-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.24;
+      animation: floatMesh 22s ease-in-out infinite alternate;
+    }
+
+    .orb-1 { width: 55vw; height: 55vw; top: -15%; right: -10%; background: var(--accent); }
+    .orb-2 { width: 45vw; height: 45vw; bottom: 5%; left: -15%; background: var(--accent); animation-delay: -9s; opacity: 0.18; }
+
+    @keyframes floatMesh {
+      0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      50% { transform: translate(-35px, 45px) scale(1.08) rotate(180deg); }
+      100% { transform: translate(30px, -25px) scale(0.94) rotate(360deg); }
+    }
+
+    .halftone-overlay {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(var(--border-medium) 1px, transparent 1.2px);
+      background-size: 24px 24px;
+      opacity: 0.22;
+      pointer-events: none;
+      z-index: 1;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+      -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Sticky Navbar */
+    .nav-wrapper {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      padding: 0 24px;
+      margin-bottom: 20px;
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      background: var(--bg-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--accent-grad);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 14px var(--accent-glow);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-badge:hover {
+      transform: rotate(-8deg) scale(1.08);
+    }
+
+    .brand-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-family: var(--font-main);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-main);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .controls-pill {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      padding: 4px 8px;
+      border-radius: var(--radius-full);
+      gap: 8px;
+    }
+
+    .color-swatches {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .color-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .color-dot:hover { transform: scale(1.25); }
+    .color-dot.active {
+      transform: scale(1.22);
+      border-color: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    .dot-blue { background: #2563eb; }
+    .dot-green { background: #10b981; }
+    .dot-purple { background: #8b5cf6; }
+    .dot-red { background: #f43f5e; }
+    .dot-orange { background: #f97316; }
+
+    .theme-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--border-light);
+      color: var(--text-primary);
+      transform: rotate(25deg);
+    }
+
+    .theme-toggle-btn svg { width: 16px; height: 16px; }
+
+    .btn-nav-cta {
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent-grad);
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 10px var(--accent-glow);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px var(--accent-glow);
+    }
+
+    /* Scroll Reveal Animation Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-35px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(35px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .in-view {
+      opacity: 1 !important;
+      transform: translate(0, 0) scale(1) !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 50px 0 60px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: var(--accent-subtle);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--accent-glow);
+      margin-bottom: 20px;
+      animation: pulseBadge 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+      50% { box-shadow: 0 0 16px 2px var(--accent-glow); }
+    }
+
+    .pulse-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.7; }
+    }
+
+    .hero-name-big {
+      font-family: var(--font-heading);
+      font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      line-height: 1.05;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 2.4vw, 1.85rem);
+      font-weight: 700;
+      color: var(--text-secondary);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .text-gradient {
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-role-pill-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .role-badge {
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-bio {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 26px;
+      max-width: 620px;
+    }
+
+    .hero-meta-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      padding: 6px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+    }
+
+    .meta-chip svg { color: var(--accent); }
+
+    .hero-btn-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--accent-grad);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px var(--accent-glow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255,255,255,0.25), transparent);
+      transform: rotate(30deg) translateY(-100%);
+      transition: transform 0.75s ease-in-out;
+    }
+
+    .btn-primary:hover::before {
+      transform: rotate(30deg) translateY(100%);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      padding: 13px 24px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-medium);
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Hero Portrait Visual */
+    .hero-visual-area {
+      position: relative;
+    }
+
+    .portrait-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: #000;
+      overflow: hidden;
+      border: 1px solid var(--border-medium);
+      box-shadow: 0 35px 80px -15px rgba(0,0,0,0.6);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+
+    .portrait-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 45px 90px -10px var(--accent-glow);
+      border-color: var(--accent);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      max-height: 520px;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .portrait-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .portrait-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 34px 26px 24px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.60) 65%, transparent 100%);
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+
+    .portrait-name {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .portrait-sub {
+      font-family: var(--font-main);
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.82);
+      margin-top: 4px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* METRICS STRIP */
+    .metrics-section {
+      margin: 40px 0 70px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 14px 30px var(--accent-glow);
+    }
+
+    .metric-val {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .metric-lbl {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* SECTION HEADERS */
+    .section-wrap {
+      padding: 70px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* WORKS GALLERY & FILTER PILLS */
+    .filter-pills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .pill-btn {
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .pill-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-grad);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /* 3D Tilt Project Cards */
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 40px -10px var(--accent-glow);
+      border-color: var(--accent);
+    }
+
+    .project-thumb-frame {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      background: #000;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .project-thumb-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card:hover .project-thumb-frame img {
+      transform: scale(1.08);
+    }
+
+    .tag-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .proj-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .proj-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .chip-sm {
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+    }
+
+    .card-action-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      transform: translateX(4px);
+    }
+
+    /* VECTOR BLUEPRINT STUDIO */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .about-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .about-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .quote-box {
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      background: var(--accent-subtle);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .feature-chip {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .dyeline-studio {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .studio-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .studio-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .studio-tab {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .studio-tab.active {
+      background: var(--accent-grad);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .canvas-box {
+      width: 100%;
+      height: 260px;
+      background: #080b11;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .canvas-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .vector-svg {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Drawing stroke animation */
+    .draw-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawVector 1.8s ease-out forwards;
+    }
+
+    @keyframes drawVector {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .legend-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      padding-top: 12px;
+    }
+
+    /* SKILLS 3-COLUMN */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .skill-col {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .skill-col:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: 0 16px 36px var(--accent-glow);
+    }
+
+    .col-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .col-icon svg { width: 24px; height: 24px; }
+
+    .col-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .col-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      min-height: 42px;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-badge {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+
+    .skill-badge:hover {
+      background: var(--accent-subtle);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .level-meter {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .meter-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .meter-track {
+      height: 6px;
+      background: var(--border-light);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      height: 100%;
+      background: var(--accent-grad);
+      border-radius: 3px;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* EXPERIENCE TIMELINE */
+    .timeline-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-wrap::before {
+      content: '';
+      position: absolute;
+      left: 32px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: var(--border-medium);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 44px;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .item-bullet {
+      position: absolute;
+      left: 21px;
+      top: 6px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 12px var(--accent-glow);
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-item:hover .item-bullet {
+      transform: scale(1.35);
+    }
+
+    .item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .item-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px var(--accent-glow);
+    }
+
+    .card-meta-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .job-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .company-tag {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .job-date {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-light);
+    }
+
+    .duty-list {
+      list-style: none;
+      margin-top: 14px;
+    }
+
+    .duty-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .duty-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* CONTACT SECTION */
+    .contact-card-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 50px 40px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-h2 {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .contact-p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      color: inherit;
+    }
+
+    .contact-pill-item:hover {
+      border-color: var(--accent);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .item-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .inquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-lbl {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .field-input, .field-textarea {
+      font-family: var(--font-main);
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-primary);
+      border: 1px solid var(--border-medium);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .field-input:focus, .field-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-subtle);
+    }
+
+    .field-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 40px 0 50px;
+      border-top: 1px solid var(--border-light);
+      margin-top: 50px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent);
+    }
+
+    /* LIGHTBOX MODAL WITH ZOOM & NAV */
+    .lightbox-scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox-scrim.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-dialog {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.92);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox-scrim.open .lightbox-dialog {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      z-index: 10;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover {
+      background: var(--accent);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 40%;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      z-index: 10;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: var(--transition);
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--accent);
+      transform: scale(1.1);
+    }
+
+    .lightbox-nav-prev { left: 16px; }
+    .lightbox-nav-next { right: 16px; }
+
+    .lightbox-image-wrap {
+      width: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+      max-height: 580px;
+      overflow: hidden;
+    }
+
+    .lightbox-image-wrap img {
+      max-width: 100%;
+      max-height: 580px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox-info {
+      padding: 26px;
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast-box {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 2000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .toast-box.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .hero-btn-row { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-secondary { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Interactive Mouse Spotlight -->
+  <div class="mouse-spotlight" id="mouseSpotlight"></div>
+
+  <!-- Ambient Animated Lighting Mesh -->
+  <div class="ambient-bg">
+    <div class="mesh-orb orb-1"></div>
+    <div class="mesh-orb orb-2"></div>
+  </div>
+  <div class="halftone-overlay"></div>
+
+  <!-- STICKY NAVBAR -->
+  <div class="nav-wrapper">
+    <nav class="navbar">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-badge">JK</div>
+        <div class="brand-info">
+          <span class="brand-name">JUNED KHAN</span>
+          <span class="brand-sub">Packaging Designer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Portfolio</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Expertise</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <div class="controls-pill" title="Accent Palette & Dark/Light Mode">
+          <div class="color-swatches">
+            <span class="color-dot dot-blue active" data-color="blue" title="Royal Blue"></span>
+            <span class="color-dot dot-green" data-color="green" title="Eco Emerald"></span>
+            <span class="color-dot dot-purple" data-color="purple" title="Luxury Violet"></span>
+            <span class="color-dot dot-red" data-color="red" title="Crimson Red"></span>
+            <span class="color-dot dot-orange" data-color="orange" title="Industrial Orange"></span>
+          </div>
+          <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle dark and light mode">
+            <svg id="moonIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg id="sunIcon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
+
+        <a href="#contact" class="btn-nav-cta">
+          <span>Get in Touch</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="wrapper">
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-grid">
+        <div class="hero-text-area reveal-left">
+          <div class="badge-status">
+            <span class="pulse-indicator"></span>
+            <span>Available for Packaging & Print-Ready Projects</span>
+          </div>
+
+          <!-- Large Name First -->
+          <h1 class="hero-name-big">JUNED KHAN</h1>
+
+          <div class="hero-subtitle">
+            Precision <span class="text-gradient">Packaging</span> &amp; Visual Brand Identity.
+          </div>
+
+          <div class="hero-role-pill-group">
+            <span class="role-badge">Graphic Designer</span>
+            <span class="role-badge">Packaging Specialist</span>
+            <span class="role-badge">Pre-Press Production</span>
+          </div>
+
+          <p class="hero-bio">
+            Professional Graphic Designer specializing in packaging design, branding, and print-ready artwork. I have experience creating creative packaging solutions, product branding, dyelines, brochures, logos, and marketing materials using CorelDRAW, Adobe Photoshop, and Adobe Illustrator. I focus on delivering modern, production-ready designs with strong visual appeal.
+          </p>
+
+          <div class="hero-meta-items">
+            <div class="meta-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Mumbai Mahanagar, India</span>
+            </div>
+            <div class="meta-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Dupack Poly Films (Ambernath)</span>
+            </div>
+          </div>
+
+          <div class="hero-btn-row">
+            <a href="#projects" class="btn-primary">
+              <span>View Portfolio Works</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="mailto:juned.jk09@gmail.com" class="btn-secondary" id="heroEmailBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>juned.jk09@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/junaid-khan-6248992a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn-secondary" title="LinkedIn Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Visual (User Photo) -->
+        <div class="hero-visual-area reveal-right">
+          <div class="portrait-card">
+            <img src="images/juned-profile.png" alt="Juned Khan — Graphic &amp; Packaging Designer" />
+            <div class="portrait-overlay">
+              <div class="portrait-name">JUNED KHAN</div>
+              <div class="portrait-sub">Graphic &amp; Packaging Designer · Mumbai</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS STRIP (ANIMATED COUNTERS) -->
+    <div class="metrics-section reveal">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-val" data-target="2" data-suffix="+">0</div>
+          <div class="metric-lbl">Years In Packaging</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" data-target="500" data-suffix="+">0</div>
+          <div class="metric-lbl">Dyelines &amp; Artworks</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" data-target="100" data-suffix="%">0</div>
+          <div class="metric-lbl">Production Accuracy</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" data-target="25" data-suffix="+">0</div>
+          <div class="metric-lbl">Brand Packaging Lines</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO GALLERY (9 DESIGN PROJECTS) -->
+    <section class="section-wrap" id="projects">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Design Showcase</span>
+        <h2 class="section-title">Selected Packaging &amp; Brand Works</h2>
+        <p class="section-subtitle">
+          Factory-ready multi-layer pouches, luxury cosmetic packaging, technical pre-press production artwork sheets, folding cartons, and brand systems.
+        </p>
+      </div>
+
+      <div class="filter-pills reveal">
+        <button class="pill-btn active" data-filter="all">All Works (9)</button>
+        <button class="pill-btn" data-filter="pouch">Flexible Pouches</button>
+        <button class="pill-btn" data-filter="dyeline">Technical Dyelines</button>
+        <button class="pill-btn" data-filter="luxury">Bottles &amp; Luxury</button>
+        <button class="pill-btn" data-filter="carton">Boxes &amp; Cartons</button>
+        <button class="pill-btn" data-filter="branding">Brand Identity</button>
+      </div>
+
+      <div class="gallery-grid" id="portfolioGallery">
+        
+        <!-- 1: ODP Arabia Perfume -->
+        <div class="project-card reveal" data-category="luxury">
+          <div class="project-thumb-frame" onclick="openLightbox('images/odp-arabia-perfume.jpg', 'ODP Arabia — Censational Lifestyle', 'Luxury 100ml Eau De Parfum bottle presentation and gold-leaf outer box packaging. Engineered with high-gloss gold foil stamping, custom typography alignment, and perfume bottle splash dynamics.')">
+            <span class="tag-badge">Luxury Perfume</span>
+            <img src="images/odp-arabia-perfume.jpg" alt="ODP Arabia Luxury Perfume" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">ODP Arabia Luxury Perfume</h3>
+              <p class="proj-desc">
+                High-end perfume packaging featuring gold-foil embossed outer carton box and bottle typography with splash dynamics.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Gold Foil Box</span>
+                <span class="chip-sm">Bottle Label</span>
+                <span class="chip-sm">Cosmetic FMCG</span>
+                <span class="chip-sm">CorelDRAW</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Luxury &amp; Fragrance</span>
+              <button class="action-btn" onclick="openLightbox('images/odp-arabia-perfume.jpg', 'ODP Arabia — Censational Lifestyle', 'Luxury 100ml Eau De Parfum bottle presentation and gold-leaf outer box packaging. Engineered with high-gloss gold foil stamping, custom typography alignment, and perfume bottle splash dynamics.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2: Essence of Nature Artwork Sheet -->
+        <div class="project-card reveal" data-category="dyeline">
+          <div class="project-thumb-frame" onclick="openLightbox('images/essence-nature-artwork-sheet.jpg', 'Essence of Nature — Print-Ready Production Artwork Sheet', 'Complete pre-press technical sheet featuring 3-panel pouch keyline dieline, 3mm bleed margin, critical safe zone, CMYK process color breakdown, mandatory nutritional panel alignment, and EAN-13 barcode specs.')">
+            <span class="tag-badge">Pre-Press Sheet</span>
+            <img src="images/essence-nature-artwork-sheet.jpg" alt="Essence of Nature Artwork Sheet" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Essence of Nature Dyeline Sheet</h3>
+              <p class="proj-desc">
+                Comprehensive technical print-ready artwork sheet with 3-panel dieline, CMYK separations, 3mm bleed, and barcode.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Vector Dyeline</span>
+                <span class="chip-sm">3mm Bleed</span>
+                <span class="chip-sm">CMYK Separation</span>
+                <span class="chip-sm">EAN-13 Barcode</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Technical Production</span>
+              <button class="action-btn" onclick="openLightbox('images/essence-nature-artwork-sheet.jpg', 'Essence of Nature — Print-Ready Production Artwork Sheet', 'Complete pre-press technical sheet featuring 3-panel pouch keyline dieline, 3mm bleed margin, critical safe zone, CMYK process color breakdown, mandatory nutritional panel alignment, and EAN-13 barcode specs.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3: Essence of Nature Spices Pouches Trio -->
+        <div class="project-card reveal" data-category="pouch">
+          <div class="project-thumb-frame" onclick="openLightbox('images/essence-nature-pouches.jpg', 'Taste the Essence of Nature — Spice Pouches Trio', 'Premium FMCG stand-up flexible pouch line for Turmeric (100g), Chilli (200g), and Coriander (200g). Designed with vibrant color coding, leaf icon brand mark, and food-grade multi-layer film barrier specs.')">
+            <span class="tag-badge">Flexible Pouches</span>
+            <img src="images/essence-nature-pouches.jpg" alt="Essence of Nature Spice Pouches" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Essence of Nature Spices Trio</h3>
+              <p class="proj-desc">
+                Stand-up spice pouch line (Turmeric, Chilli, Coriander) designed with vibrant color coding and high shelf impact.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Stand-Up Pouch</span>
+                <span class="chip-sm">Rotogravure</span>
+                <span class="chip-sm">Barrier Film</span>
+                <span class="chip-sm">FMCG Spices</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Pouch Packaging</span>
+              <button class="action-btn" onclick="openLightbox('images/essence-nature-pouches.jpg', 'Taste the Essence of Nature — Spice Pouches Trio', 'Premium FMCG stand-up flexible pouch line for Turmeric (100g), Chilli (200g), and Coriander (200g). Designed with vibrant color coding, leaf icon brand mark, and food-grade multi-layer film barrier specs.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4: Chocobomb Flow-Wrap Datasheet -->
+        <div class="project-card reveal" data-category="dyeline">
+          <div class="project-thumb-frame" onclick="openLightbox('images/chocobomb-flowwrap.jpg', 'Chocobomb Cashew Nuts — Technical Flow-Wrap Datasheet', 'Industrial packaging datasheet and mechanical flow-wrap pouch structure (PE | Alu | OPP multi-layer laminate) with crimped pouch seal pressure zones, hermetic sealing specs, and internal gas flush composition.')">
+            <span class="tag-badge">Flow-Wrap Datasheet</span>
+            <img src="images/chocobomb-flowwrap.jpg" alt="Chocobomb Technical Datasheet" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Chocobomb Flow-Wrap Datasheet</h3>
+              <p class="proj-desc">
+                Engineering datasheet for multi-layer barrier flow-wrap confectionery pouch with crimped seal pressure zones.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Flow-Wrap</span>
+                <span class="chip-sm">PE | Alu | OPP</span>
+                <span class="chip-sm">Hermetic Seal</span>
+                <span class="chip-sm">Datasheet</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Packaging Engineering</span>
+              <button class="action-btn" onclick="openLightbox('images/chocobomb-flowwrap.jpg', 'Chocobomb Cashew Nuts — Technical Flow-Wrap Datasheet', 'Industrial packaging datasheet and mechanical flow-wrap pouch structure (PE | Alu | OPP multi-layer laminate) with crimped pouch seal pressure zones, hermetic sealing specs, and internal gas flush composition.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5: Open Secret Spices Pouches -->
+        <div class="project-card reveal" data-category="pouch">
+          <div class="project-thumb-frame" onclick="openLightbox('images/5897c22f-1.png', 'Open Secret Spices (Biryani & Garam Masala)', 'Multi-layer barrier flexible pouch packaging for 200g spice line. Designed with appetite-appeal food photography, rotogravure cylinder color separation, seal integrity windows, and sustainable polymer film laminates.')">
+            <span class="tag-badge">Barrier Pouch</span>
+            <img src="images/5897c22f-1.png" alt="Open Secret Spices Packaging" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Open Secret Spices Pouches</h3>
+              <p class="proj-desc">
+                Biryani &amp; Garam Masala 200g flexible barrier pouches designed for high shelf visibility, barrier protection, and food-grade lamination.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Barrier Pouch</span>
+                <span class="chip-sm">Rotogravure</span>
+                <span class="chip-sm">Polymer Laminate</span>
+                <span class="chip-sm">Food Packaging</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Pouch Packaging</span>
+              <button class="action-btn" onclick="openLightbox('images/5897c22f-1.png', 'Open Secret Spices (Biryani & Garam Masala)', 'Multi-layer barrier flexible pouch packaging for 200g spice line. Designed with appetite-appeal food photography, rotogravure cylinder color separation, seal integrity windows, and sustainable polymer film laminates.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6: Vidur Mustard Oil -->
+        <div class="project-card reveal" data-category="luxury">
+          <div class="project-thumb-frame" onclick="openLightbox('images/5ad9eea1-3.jpg', 'Vidur Mustard Oil (पीली सरसों का तेल)', 'Custom bottle wrap label and 3D PET presentation with Hindi typography hierarchy, oil splash dynamics, and cylinder print specifications.')">
+            <span class="tag-badge">Bottle Label</span>
+            <img src="images/5ad9eea1-3.jpg" alt="Vidur Mustard Oil" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Vidur Mustard Oil Packaging</h3>
+              <p class="proj-desc">
+                High-appeal edible oil bottle wrap label design engineered with moisture-resistant substrate specs and prominent branding.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Label Design</span>
+                <span class="chip-sm">3D Mockup</span>
+                <span class="chip-sm">Hindi Typography</span>
+                <span class="chip-sm">Pre-Press</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Bottle Packaging</span>
+              <button class="action-btn" onclick="openLightbox('images/5ad9eea1-3.jpg', 'Vidur Mustard Oil (पीली सरसों का तेल)', 'Custom bottle wrap label and 3D PET presentation with Hindi typography hierarchy, oil splash dynamics, and cylinder print specifications.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7: DMH White Pepper Carton Box -->
+        <div class="project-card reveal" data-category="carton">
+          <div class="project-thumb-frame" onclick="openLightbox('images/3906d5f7-1.jpg', 'DMH White Pepper Powder (50g Box)', 'Mono-carton packaging box for DMH authentic spices, engineered with custom box keylines, die-cut scores, ingredient tables, and multilingual labels.')">
+            <span class="tag-badge">Carton Box</span>
+            <img src="images/3906d5f7-1.jpg" alt="DMH White Pepper Powder" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">DMH White Pepper Carton Box</h3>
+              <p class="proj-desc">
+                50g spices carton box packaging designed with custom dyelines, ingredient facts panel, and striking shelf presence.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Box Dyeline</span>
+                <span class="chip-sm">Carton Packaging</span>
+                <span class="chip-sm">CorelDRAW</span>
+                <span class="chip-sm">Spices FMCG</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Spices Packaging</span>
+              <button class="action-btn" onclick="openLightbox('images/3906d5f7-1.jpg', 'DMH White Pepper Powder (50g Box)', 'Mono-carton packaging box for DMH authentic spices, engineered with custom box keylines, die-cut scores, ingredient tables, and multilingual labels.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8: Bakers Fresh Bakery Identity -->
+        <div class="project-card reveal" data-category="branding">
+          <div class="project-thumb-frame" onclick="openLightbox('images/7314ab09-2.jpg', 'Bakers Fresh — Bakery Brand Identity & Packaging', 'Comprehensive brand identity and bakery collateral suite: character mascot logo, fresh bread window bag packaging, delivery truck livery, storefront signage, sidewalk A-frame, staff apron, and signature Deep Gold / Warm Cream / Cocoa Brown color palette.')">
+            <span class="tag-badge">Brand &amp; Packaging</span>
+            <img src="images/7314ab09-2.jpg" alt="Bakers Fresh Brand" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Bakers Fresh Bakery Identity</h3>
+              <p class="proj-desc">
+                Artisanal bakery brand system featuring mascot logo, bread window pouch packaging, delivery truck wrap, and retail storefront signage.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Bread Packaging</span>
+                <span class="chip-sm">Mascot Logo</span>
+                <span class="chip-sm">Vehicle Livery</span>
+                <span class="chip-sm">Color System</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Bakery Branding</span>
+              <button class="action-btn" onclick="openLightbox('images/7314ab09-2.jpg', 'Bakers Fresh — Bakery Brand Identity & Packaging', 'Comprehensive brand identity and bakery collateral suite: character mascot logo, fresh bread window bag packaging, delivery truck livery, storefront signage, sidewalk A-frame, staff apron, and signature Deep Gold / Warm Cream / Cocoa Brown color palette.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9: Joyfresh Food & Packaging -->
+        <div class="project-card reveal" data-category="branding">
+          <div class="project-thumb-frame" onclick="openLightbox('images/1557bf4d-6.png', 'Joyfresh — Food & Beverage Identity & Packaging', 'Fresh produce packaging design system: fruit bowl sleeve packaging, takeaway kraft bag mockup, icon mark iterations, and warm orange (#E85110) branding.')">
+            <span class="tag-badge">Packaging &amp; Brand</span>
+            <img src="images/1557bf4d-6.png" alt="Joyfresh Packaging" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <div>
+              <h3 class="proj-title">Joyfresh Food &amp; Packaging</h3>
+              <p class="proj-desc">
+                Vibrant brand identity and fruit bowl sleeve packaging system designed for fresh retail food and beverage outlets.
+              </p>
+              <div class="chip-row">
+                <span class="chip-sm">Bowl Sleeve</span>
+                <span class="chip-sm">Kraft Bag Mockup</span>
+                <span class="chip-sm">Food Packaging</span>
+                <span class="chip-sm">Illustrator</span>
+              </div>
+            </div>
+            <div class="card-action-footer">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Retail Food &amp; Pack</span>
+              <button class="action-btn" onclick="openLightbox('images/1557bf4d-6.png', 'Joyfresh — Food & Beverage Identity & Packaging', 'Fresh produce packaging design system: fruit bowl sleeve packaging, takeaway kraft bag mockup, icon mark iterations, and warm orange (#E85110) branding.')">
+                <span>Inspect Design</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT & VECTOR BLUEPRINT INSPECTOR -->
+    <section class="section-wrap" id="about">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">About Juned</span>
+        <h2 class="section-title">Bridging Technical Production with Visual Precision</h2>
+        <p class="section-subtitle">
+          Packaging requires zero-margin engineering — aligning dielines, substrate caliper, supplier machinery, and visual appeal for maximum shelf impact.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div>
+            <h3 class="about-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>Design Engineering Philosophy</span>
+            </h3>
+
+            <p class="about-text">
+              Professional Graphic Designer specializing in packaging design, branding, and print-ready artwork. I have experience creating creative packaging solutions, product branding, dyelines, brochures, logos, and marketing materials using CorelDRAW, Adobe Photoshop, and Adobe Illustrator.
+            </p>
+
+            <div class="quote-box">
+              <p>
+                "I focus on delivering modern, production-ready designs with strong visual appeal, mechanical manufacturability, and sustainable material consideration."
+              </p>
+            </div>
+
+            <p class="about-text" style="font-size: 0.95rem;">
+              Based in <strong>Mumbai Mahanagar</strong>, I regularly coordinate with polymer film suppliers, pre-press cylinder engravers, and flexo printers to guarantee precise color trapping and exact folding tolerances.
+            </p>
+          </div>
+
+          <div class="pill-cloud">
+            <span class="feature-chip">📦 Structural Packaging</span>
+            <span class="feature-chip">📐 Vector Dyelines</span>
+            <span class="feature-chip">🎨 Pantone &amp; CMYK Separation</span>
+            <span class="feature-chip">🌱 Sustainable Mono-Materials</span>
+            <span class="feature-chip">⚡ Pre-Press Quality Control</span>
+          </div>
+        </div>
+
+        <div class="dyeline-studio reveal-right">
+          <div class="studio-top">
+            <span style="font-size: 0.9rem; font-weight: 700;">Blueprint Vector Inspector</span>
+            <div class="studio-tabs">
+              <button class="studio-tab active" data-pack="box">Carton Box</button>
+              <button class="studio-tab" data-pack="pouch">Doypack Pouch</button>
+              <button class="studio-tab" data-pack="flowwrap">Flow-Wrap</button>
+              <button class="studio-tab" data-pack="label">Bottle Wrap</button>
+            </div>
+          </div>
+
+          <div class="canvas-box">
+            <div class="canvas-grid-bg"></div>
+            <svg class="vector-svg" viewBox="0 0 400 240" id="dyelineSvg">
+              <g id="dyelineSvgGroup" class="draw-line">
+                <!-- Default Box Blueprint -->
+                <path d="M 50,40 L 350,40 L 350,200 L 50,200 Z" stroke="#ef4444" stroke-width="1.8" fill="none"/>
+                <line x1="120" y1="40" x2="120" y2="200" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+                <line x1="280" y1="40" x2="280" y2="200" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+                <line x1="50" y1="100" x2="350" y2="100" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+                <line x1="50" y1="160" x2="350" y2="160" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+                <path d="M 50,60 L 30,70 L 30,170 L 50,180" stroke="#ef4444" stroke-width="1.5" fill="var(--accent-subtle)"/>
+                <text x="200" y="30" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle">WIDTH: 220mm (±0.5mm)</text>
+                <text x="375" y="125" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle" transform="rotate(90 375 125)">HEIGHT: 160mm</text>
+                <text x="200" y="135" fill="var(--accent)" font-weight="700" font-size="13" text-anchor="middle">PRIMARY DISPLAY PANEL</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="legend-row">
+            <span><span style="color:#ef4444;">—</span> Cut Line</span>
+            <span><span style="color:var(--accent);">┄</span> Crease Line</span>
+            <span><span style="color:#10b981;">—</span> Safe Bleed Margin</span>
+            <span id="blueprintSpec">Tolerance: ±0.5mm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS & EXPERTISE -->
+    <section class="section-wrap" id="skills">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Technical Mastery</span>
+        <h2 class="section-title">Core Competencies &amp; Production Stack</h2>
+        <p class="section-subtitle">
+          Specialized expertise covering vector illustration, precision dyelines, rotogravure prep, flexo plates, and sustainable packaging substrates.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-col reveal">
+          <div class="col-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          </div>
+          <h3 class="col-title">Vector &amp; Pre-Press</h3>
+          <p class="col-desc">Industrial digital tooling for print-ready separation and rotogravure cylinders.</p>
+          <div class="tags-container">
+            <span class="skill-badge">CorelDRAW</span>
+            <span class="skill-badge">Adobe Photoshop</span>
+            <span class="skill-badge">Adobe Illustrator</span>
+            <span class="skill-badge">Pantone Matching</span>
+            <span class="skill-badge">Color Separation</span>
+            <span class="skill-badge">Pre-Flighting</span>
+          </div>
+          <div class="level-meter">
+            <div class="meter-label"><span>Technical Software Mastery</span><span>98%</span></div>
+            <div class="meter-track"><div class="meter-fill" style="width: 98%;"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-col reveal">
+          <div class="col-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="col-title">Packaging Engineering</h3>
+          <p class="col-desc">Structural geometry, mechanical stress analysis, and production mockups.</p>
+          <div class="tags-container">
+            <span class="skill-badge">Pouch &amp; Box Dyelines</span>
+            <span class="skill-badge">Component &amp; Assembly</span>
+            <span class="skill-badge">Mechanical Analysis</span>
+            <span class="skill-badge">Keyline Generation</span>
+            <span class="skill-badge">Physical Mockups</span>
+            <span class="skill-badge">Seal Integrity Specs</span>
+          </div>
+          <div class="level-meter">
+            <div class="meter-label"><span>Structural Durability</span><span>95%</span></div>
+            <div class="meter-track"><div class="meter-fill" style="width: 95%;"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-col reveal">
+          <div class="col-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="col-title">Sustainable &amp; Commercial</h3>
+          <p class="col-desc">Eco-friendly substrates, supplier management, and large-scale manufacturing workflows.</p>
+          <div class="tags-container">
+            <span class="skill-badge">Sustainable Packaging</span>
+            <span class="skill-badge">Polymer Barrier Films</span>
+            <span class="skill-badge">Supplier Communication</span>
+            <span class="skill-badge">Print Specifications</span>
+            <span class="skill-badge">Label &amp; Rotogravure</span>
+            <span class="skill-badge">Eco-Footprint Reduction</span>
+          </div>
+          <div class="level-meter">
+            <div class="meter-label"><span>Manufacturing Feasibility</span><span>96%</span></div>
+            <div class="meter-track"><div class="meter-fill" style="width: 96%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE -->
+    <section class="section-wrap" id="experience">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Professional History</span>
+        <h2 class="section-title">Work Experience &amp; Industry Leadership</h2>
+        <p class="section-subtitle">
+          Proven history delivering factory-ready packaging designs with complete technical accountability.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-item reveal">
+          <div class="item-bullet"></div>
+          <div class="item-card">
+            <div class="card-meta-header">
+              <div>
+                <h3 class="job-title">Packaging Designer</h3>
+                <span class="company-tag">Dupack Poly Films — Ambernath, Maharashtra</span>
+              </div>
+              <span class="job-date">December 2024 – Present</span>
+            </div>
+            <ul class="duty-list">
+              <li>Creating technical solutions including component and assembly design for high-barrier flexible packaging.</li>
+              <li>Conducting qualitative and quantitative mechanical stress analysis on multi-layer polymer films.</li>
+              <li>Assisting with product design engineering from initial concept dyeline generation through cylinder engraving.</li>
+              <li>Managing external supplier relationships and communicating technical production requirements directly to press operators.</li>
+              <li>Researching eco-friendly, recyclable mono-material substrates to reduce commercial environmental footprints.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="item-bullet"></div>
+          <div class="item-card">
+            <div class="card-meta-header">
+              <div>
+                <h3 class="job-title">Packaging Designer</h3>
+                <span class="company-tag">Sana Pack Tech — Mumbai</span>
+              </div>
+              <span class="job-date">October 2023 – November 2024</span>
+            </div>
+            <ul class="duty-list">
+              <li>Engineered custom folding carton and flexible pouch dielines across FMCG food, confectionery, and spice sectors.</li>
+              <li>Produced 100% production-ready vector artwork in CorelDRAW and Illustrator with zero pre-flight rejection rate.</li>
+              <li>Supervised color consistency, Pantone ink matching, and trapping tolerances on active flexographic print runs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-wrap" id="contact">
+      <div class="contact-card-box reveal">
+        <div class="contact-layout">
+          <div>
+            <span class="section-eyebrow">Direct Contact</span>
+            <h2 class="contact-h2">Let’s collaborate on your next packaging project.</h2>
+            <p class="contact-p">
+              Whether you need precision pouch dyelines, luxury box keylines, flexographic label artwork, or sustainable packaging engineering, I’m ready to help.
+            </p>
+
+            <div class="contact-list">
+              <!-- Direct Email Block -->
+              <div class="contact-pill-item" id="copyEmailBlock" style="cursor: pointer;" title="Click to copy email address">
+                <div class="item-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div style="flex: 1;">
+                  <div class="contact-lbl">Email Address (Click to Copy)</div>
+                  <div class="contact-val">juned.jk09@gmail.com</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </div>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/junaid-khan-6248992a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-pill-item">
+                <div class="item-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-lbl">LinkedIn Profile</div>
+                  <div class="contact-val">Junaid Khan / Packaging Designer</div>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-pill-item">
+                <div class="item-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-lbl">Location</div>
+                  <div class="contact-val">Mumbai Mahanagar, Maharashtra</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Form -->
+          <form class="inquiry-form" id="inquiryForm">
+            <div class="form-field">
+              <label class="field-lbl" for="userName">Your Name</label>
+              <input type="text" id="userName" class="field-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-field">
+              <label class="field-lbl" for="userCategory">Project Type</label>
+              <input type="text" id="userCategory" class="field-input" placeholder="e.g. Pouch Dyelines / Box Packaging / Pre-Press Artwork" />
+            </div>
+
+            <div class="form-field">
+              <label class="field-lbl" for="userMessage">Project Details &amp; Substrate Requirements</label>
+              <textarea id="userMessage" class="field-textarea" placeholder="Describe dimensions, packaging type, barrier requirements, or timeline..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+              <span>Send Message to Juned</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer wrapper">
+    <div class="footer-flex">
+      <div>
+        <span style="font-weight: 700; color: var(--text-primary);">JUNED KHAN</span> · Graphic Designer (Packaging Specialist)
+        <div style="font-size: 0.78rem; margin-top: 4px;">Mumbai Mahanagar · CorelDRAW, Adobe Photoshop, Adobe Illustrator</div>
+      </div>
+
+      <div class="footer-nav">
+        <a href="mailto:juned.jk09@gmail.com">juned.jk09@gmail.com</a>
+        <a href="https://www.linkedin.com/in/junaid-khan-6248992a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL WITH ZOOM & PREV/NEXT ARROWS -->
+  <div class="lightbox-scrim" id="lightboxModal">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close image preview">&times;</button>
+      <button class="lightbox-nav-btn lightbox-nav-prev" id="lbPrevBtn" aria-label="Previous project">‹</button>
+      <button class="lightbox-nav-btn lightbox-nav-next" id="lbNextBtn" aria-label="Next project">›</button>
+
+      <div class="lightbox-image-wrap">
+        <img id="lbTargetImg" src="" alt="Project Preview" />
+      </div>
+      <div class="lightbox-info">
+        <div class="tag-badge" style="position:static; display:inline-block; margin-bottom: 10px;">Design Showcase</div>
+        <h3 id="lbTargetTitle" style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Project Title</h3>
+        <p id="lbTargetDesc" style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.65;">Detailed description.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-box" id="globalToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastAlertText">Notification</span>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* 1. SCROLL PROGRESS BAR */
+      const scrollProgressBar = document.getElementById('scrollProgressBar');
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        scrollProgressBar.style.width = `${progress}%`;
+      });
+
+      /* 2. MOUSE SPOTLIGHT TRACKER */
+      const mouseSpotlight = document.getElementById('mouseSpotlight');
+      window.addEventListener('mousemove', (e) => {
+        document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+      });
+
+      /* 3. THEME SELECTION */
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+
+      const savedTheme = localStorage.getItem('juned_theme') || 
+        (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      setTheme(savedTheme);
+
+      function setTheme(theme) {
+        htmlEl.setAttribute('data-theme', theme);
+        localStorage.setItem('juned_theme', theme);
+        if (theme === 'dark') {
+          moonIcon.style.display = 'block';
+          sunIcon.style.display = 'none';
+        } else {
+          moonIcon.style.display = 'none';
+          sunIcon.style.display = 'block';
+        }
+      }
+
+      themeToggleBtn.addEventListener('click', () => {
+        const cur = htmlEl.getAttribute('data-theme');
+        setTheme(cur === 'dark' ? 'light' : 'dark');
+      });
+
+      /* 4. COLOR ACCENTS */
+      const colorDots = document.querySelectorAll('.color-dot');
+      const savedColor = localStorage.getItem('juned_color') || 'blue';
+      setColor(savedColor);
+
+      colorDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          setColor(dot.getAttribute('data-color'));
+        });
+      });
+
+      function setColor(color) {
+        htmlEl.setAttribute('data-color', color);
+        localStorage.setItem('juned_color', color);
+        colorDots.forEach(d => {
+          d.classList.toggle('active', d.getAttribute('data-color') === color);
+        });
+      }
+
+      /* 5. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) */
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      /* 6. ANIMATED NUMBER COUNTERS */
+      const metricVals = document.querySelectorAll('.metric-val');
+      let countersStarted = false;
+
+      const metricObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            metricVals.forEach(valEl => {
+              const target = parseInt(valEl.getAttribute('data-target'), 10);
+              const suffix = valEl.getAttribute('data-suffix') || '';
+              let current = 0;
+              const stepTime = Math.max(15, Math.floor(1800 / target));
+              const increment = target > 100 ? Math.ceil(target / 60) : 1;
+
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                valEl.textContent = `${current}${suffix}`;
+              }, stepTime);
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const metricsSection = document.querySelector('.metrics-section');
+      if (metricsSection) metricObserver.observe(metricsSection);
+
+      /* 7. GALLERY CATEGORY FILTERING */
+      const pillBtns = document.querySelectorAll('.pill-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      pillBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          pillBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+              }, 50);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px) scale(0.96)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      /* 8. 3D CARD TILT EFFECT */
+      projectCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -5;
+          const rotateY = ((x - centerX) / centerX) * 5;
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+        });
+      });
+
+      /* 9. VECTOR BLUEPRINT STUDIO (SELF-DRAWING LINES) */
+      const studioTabs = document.querySelectorAll('.studio-tab');
+      const dyelineSvgGroup = document.getElementById('dyelineSvgGroup');
+      const blueprintSpec = document.getElementById('blueprintSpec');
+
+      const blueprints = {
+        box: {
+          spec: 'Tolerance: ±0.5mm · Bleed: 3mm · Caliper: 350 GSM',
+          svg: `
+            <path d="M 50,40 L 350,40 L 350,200 L 50,200 Z" stroke="#ef4444" stroke-width="1.8" fill="none"/>
+            <line x1="120" y1="40" x2="120" y2="200" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+            <line x1="280" y1="40" x2="280" y2="200" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+            <line x1="50" y1="100" x2="350" y2="100" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+            <line x1="50" y1="160" x2="350" y2="160" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 5" />
+            <path d="M 50,60 L 30,70 L 30,170 L 50,180" stroke="#ef4444" stroke-width="1.5" fill="var(--accent-subtle)"/>
+            <text x="200" y="30" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle">WIDTH: 220mm (±0.5mm)</text>
+            <text x="375" y="125" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle" transform="rotate(90 375 125)">HEIGHT: 160mm</text>
+            <text x="200" y="135" fill="var(--accent)" font-weight="700" font-size="13" text-anchor="middle">PRIMARY DISPLAY PANEL</text>
+          `
+        },
+        pouch: {
+          spec: 'Capacity: 200g–500g · PE/ALU/PET Barrier · Tear Notch',
+          svg: `
+            <path d="M 80,30 L 320,30 L 340,195 C 340 215, 60 215, 60 195 Z" stroke="#ef4444" stroke-width="1.8" fill="none"/>
+            <line x1="75" y1="55" x2="325" y2="55" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4" />
+            <line x1="70" y1="70" x2="330" y2="70" stroke="#10b981" stroke-width="1.2" />
+            <ellipse cx="200" cy="195" rx="120" ry="16" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4" fill="var(--accent-subtle)"/>
+            <text x="200" y="24" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle">STANDUP DOYPACK · 500g CAPACITY</text>
+            <text x="200" y="125" fill="var(--accent)" font-weight="700" font-size="13" text-anchor="middle">FRONT DISPLAY WITH TEAR NOTCH</text>
+            <text x="200" y="180" fill="var(--text-muted)" font-size="10" font-family="var(--font-mono)" text-anchor="middle">K-STYLE BOTTOM GUSSET</text>
+          `
+        },
+        flowwrap: {
+          spec: 'Flow-Wrap Length: 155mm · PE | Alu | OPP · Hermetic Gas Seal',
+          svg: `
+            <rect x="50" y="55" width="300" height="130" rx="4" stroke="#ef4444" stroke-width="1.8" fill="none"/>
+            <line x1="90" y1="55" x2="90" y2="185" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="4 4"/>
+            <line x1="310" y1="55" x2="310" y2="185" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="4 4"/>
+            <rect x="50" y="55" width="40" height="130" fill="var(--accent-subtle)" stroke="none"/>
+            <rect x="310" y="55" width="40" height="130" fill="var(--accent-subtle)" stroke="none"/>
+            <text x="200" y="42" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle">WRAPPER: 155mm (±3mm) · AREA: 105 sq.cm</text>
+            <text x="200" y="115" fill="var(--accent)" font-weight="700" font-size="13" text-anchor="middle">FLOW-WRAP CONFECTIONERY POUCH</text>
+            <text x="200" y="145" fill="var(--text-muted)" font-size="10" font-family="var(--font-mono)" text-anchor="middle">CRIMPED SEAL PRESSURE ZONES (A & B)</text>
+          `
+        },
+        label: {
+          spec: 'PET Bottle Wrap · Rotogravure Cylinders · Barcode EAN-13',
+          svg: `
+            <rect x="40" y="50" width="320" height="140" rx="6" stroke="#ef4444" stroke-width="1.8" fill="none"/>
+            <rect x="34" y="44" width="332" height="152" rx="8" stroke="#10b981" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+            <rect x="60" y="80" width="60" height="80" fill="var(--bg-card)" stroke="var(--border-medium)"/>
+            <text x="90" y="125" font-size="8" fill="var(--text-muted)" text-anchor="middle" font-family="var(--font-mono)">EAN-13 BARCODE</text>
+            <circle cx="200" cy="115" r="28" fill="var(--accent-subtle)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="200" y="120" font-size="12" fill="var(--accent)" font-weight="bold" text-anchor="middle">LOGO</text>
+            <rect x="280" y="80" width="60" height="80" fill="var(--bg-card)" stroke="var(--border-medium)"/>
+            <text x="310" y="125" font-size="8" fill="var(--text-muted)" text-anchor="middle" font-family="var(--font-mono)">FACTS PANEL</text>
+            <text x="200" y="32" fill="var(--text-secondary)" font-size="11" font-family="var(--font-mono)" text-anchor="middle">WRAP-AROUND LABEL · ROTOGRAVURE SPEC</text>
+          `
+        }
+      };
+
+      studioTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          studioTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const pack = tab.getAttribute('data-pack');
+          if (blueprints[pack]) {
+            dyelineSvgGroup.innerHTML = blueprints[pack].svg;
+            blueprintSpec.textContent = blueprints[pack].spec;
+            dyelineSvgGroup.classList.remove('draw-line');
+            void dyelineSvgGroup.offsetWidth; // trigger reflow
+            dyelineSvgGroup.classList.add('draw-line');
+          }
+        });
+      });
+
+      /* 10. CLIPBOARD & TOAST NOTIFICATION */
+      const copyEmailBlock = document.getElementById('copyEmailBlock');
+      const globalToast = document.getElementById('globalToast');
+      const toastAlertText = document.getElementById('toastAlertText');
+
+      function triggerToast(txt) {
+        toastAlertText.textContent = txt;
+        globalToast.classList.add('active');
+        setTimeout(() => globalToast.classList.remove('active'), 3200);
+      }
+
+      if (copyEmailBlock) {
+        copyEmailBlock.addEventListener('click', () => {
+          navigator.clipboard.writeText('juned.jk09@gmail.com').then(() => {
+            triggerToast('juned.jk09@gmail.com copied to clipboard!');
+          }).catch(() => {
+            window.location.href = 'mailto:juned.jk09@gmail.com';
+          });
+        });
+      }
+
+      /* 11. INQUIRY FORM */
+      const inquiryForm = document.getElementById('inquiryForm');
+      if (inquiryForm) {
+        inquiryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('userName').value.trim();
+          const cat = document.getElementById('userCategory').value.trim();
+          const msg = document.getElementById('userMessage').value.trim();
+          const mailto = `mailto:juned.jk09@gmail.com?subject=${encodeURIComponent('Packaging Inquiry: ' + name + ' (' + cat + ')')}&body=${encodeURIComponent('Hello Juned,\n\n' + msg + '\n\nBest regards,\n' + name)}`;
+          triggerToast('Opening your email client...');
+          window.location.href = mailto;
+        });
+      }
+
+      /* 12. SCROLL SPY FOR NAVBAR */
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      window.addEventListener('scroll', () => {
+        let current = '';
+        const scrollPos = window.pageYOffset;
+        sections.forEach(s => {
+          const top = s.offsetTop - 150;
+          if (scrollPos >= top && scrollPos < top + s.offsetHeight) {
+            current = s.getAttribute('id');
+          }
+        });
+        navLinks.forEach(l => {
+          l.classList.remove('active');
+          if (l.getAttribute('href') === `#${current}`) l.classList.add('active');
+        });
+      });
+    });
+
+    /* 13. LIGHTBOX MODAL WITH ARROW NAVIGATION */
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+    const lbPrevBtn = document.getElementById('lbPrevBtn');
+    const lbNextBtn = document.getElementById('lbNextBtn');
+    const lbTargetImg = document.getElementById('lbTargetImg');
+    const lbTargetTitle = document.getElementById('lbTargetTitle');
+    const lbTargetDesc = document.getElementById('lbTargetDesc');
+
+    const projectItems = [
+      {
+        src: 'images/odp-arabia-perfume.jpg',
+        title: 'ODP Arabia — Censational Lifestyle',
+        desc: 'Luxury 100ml Eau De Parfum bottle presentation and gold-leaf outer box packaging. Engineered with high-gloss gold foil stamping, custom typography alignment, and perfume bottle splash dynamics.'
+      },
+      {
+        src: 'images/essence-nature-artwork-sheet.jpg',
+        title: 'Essence of Nature — Print-Ready Production Artwork Sheet',
+        desc: 'Complete pre-press technical sheet featuring 3-panel pouch keyline dieline, 3mm bleed margin, critical safe zone, CMYK process color breakdown, mandatory nutritional panel alignment, and EAN-13 barcode specs.'
+      },
+      {
+        src: 'images/essence-nature-pouches.jpg',
+        title: 'Taste the Essence of Nature — Spice Pouches Trio',
+        desc: 'Premium FMCG stand-up flexible pouch line for Turmeric (100g), Chilli (200g), and Coriander (200g). Designed with vibrant color coding, leaf icon brand mark, and food-grade multi-layer film barrier specs.'
+      },
+      {
+        src: 'images/chocobomb-flowwrap.jpg',
+        title: 'Chocobomb Cashew Nuts — Technical Flow-Wrap Datasheet',
+        desc: 'Industrial packaging datasheet and mechanical flow-wrap pouch structure (PE | Alu | OPP multi-layer laminate) with crimped pouch seal pressure zones, hermetic sealing specs, and internal gas flush composition.'
+      },
+      {
+        src: 'images/5897c22f-1.png',
+        title: 'Open Secret Spices (Biryani & Garam Masala)',
+        desc: 'Multi-layer barrier flexible pouch packaging for 200g spice line. Designed with appetite-appeal food photography, rotogravure cylinder color separation, seal integrity windows, and sustainable polymer film laminates.'
+      },
+      {
+        src: 'images/5ad9eea1-3.jpg',
+        title: 'Vidur Mustard Oil (पीली सरसों का तेल)',
+        desc: 'Custom bottle wrap label and 3D PET presentation with Hindi typography hierarchy, oil splash dynamics, and cylinder print specifications.'
+      },
+      {
+        src: 'images/3906d5f7-1.jpg',
+        title: 'DMH White Pepper Powder (50g Box)',
+        desc: 'Mono-carton packaging box for DMH authentic spices, engineered with custom box keylines, die-cut scores, ingredient tables, and multilingual labels.'
+      },
+      {
+        src: 'images/7314ab09-2.jpg',
+        title: 'Bakers Fresh — Bakery Brand Identity & Packaging',
+        desc: 'Comprehensive brand identity and bakery collateral suite: character mascot logo, fresh bread window bag packaging, delivery truck livery, storefront signage, sidewalk A-frame, staff apron, and signature Deep Gold / Warm Cream / Cocoa Brown color palette.'
+      },
+      {
+        src: 'images/1557bf4d-6.png',
+        title: 'Joyfresh — Food & Beverage Identity & Packaging',
+        desc: 'Fresh produce packaging design system: fruit bowl sleeve packaging, takeaway kraft bag mockup, icon mark iterations, and warm orange (#E85110) branding.'
+      }
+    ];
+
+    let currentLbIndex = 0;
+
+    function openLightbox(src, title, desc) {
+      const idx = projectItems.findIndex(p => p.src === src);
+      currentLbIndex = idx !== -1 ? idx : 0;
+      updateLightboxDisplay();
+      lightboxModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxDisplay() {
+      const item = projectItems[currentLbIndex];
+      lbTargetImg.style.opacity = '0';
+      setTimeout(() => {
+        lbTargetImg.src = item.src;
+        lbTargetTitle.textContent = item.title;
+        lbTargetDesc.textContent = item.desc;
+        lbTargetImg.style.opacity = '1';
+      }, 120);
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    function nextLightbox() {
+      currentLbIndex = (currentLbIndex + 1) % projectItems.length;
+      updateLightboxDisplay();
+    }
+
+    function prevLightbox() {
+      currentLbIndex = (currentLbIndex - 1 + projectItems.length) % projectItems.length;
+      updateLightboxDisplay();
+    }
+
+    if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+    if (lbNextBtn) lbNextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextLightbox(); });
+    if (lbPrevBtn) lbPrevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevLightbox(); });
+
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextLightbox();
+      if (e.key === 'ArrowLeft') prevLightbox();
+    });
+  </script>
+</body>
+</html>
